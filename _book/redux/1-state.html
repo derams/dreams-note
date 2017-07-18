@@ -1,0 +1,314 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第一节：状态复习 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2-hello-state.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章：redux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="1-state.html">
+            
+                <a href="1-state.html">
+            
+                    
+                    第一节：状态复习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2-hello-state.html">
+            
+                <a href="2-hello-state.html">
+            
+                    
+                    第二节：引入redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第一节：状态复习</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x4E00;&#x8282;&#xFF1A;&#x72B6;&#x6001;&#x503C;&#x5F97;&#x590D;&#x4E60;">&#x7B2C;&#x4E00;&#x8282;&#xFF1A;&#x72B6;&#x6001;&#x503C;&#x5F97;&#x590D;&#x4E60;</h1>
+<pre><code>        &lt;form ref=&quot;commentForm&quot; onSubmit={this.handleSubmit}   className=&quot;comment-form&quot;&gt;
+            &lt;input ref={(value) =&gt; { this.textInput = value} } type=&quot;text&quot; className=&quot;input&quot; /&gt;
+            &lt;button type=&quot;submit&quot; className=&quot;submit-btn&quot; &gt;&#x63D0;&#x4EA4;&lt;/button&gt;
+        &lt;/form&gt;
+</code></pre><p>&#x5B9A;&#x4E49; handleSubmit</p>
+<pre><code class="lang-js">handleSubmit = () =&gt;{
+
+}
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x4F7F;&#x7528;&#x4E86;ES6&#x7684;&#x80D6;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x8BED;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x4E2D;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;bind(this)&#x4E86;</p>
+<pre><code>e.preventDefualt() &#x963B;&#x6B62;&#x8DF3;&#x8F6C;
+</code></pre><h3 id="&#x62FF;&#x5230;input&#x7684;value&#x503C;">&#x62FF;&#x5230;input&#x7684;value&#x503C;</h3>
+<p>&#x9996;&#x5148;&#x6DFB;&#x52A0;ref&#x5982;&#x4E0B;</p>
+<pre><code class="lang-js"> &lt;input ref={value=&gt; <span class="hljs-keyword">this</span>.comment = value} type=<span class="hljs-string">&quot;text&quot;</span> className=<span class="hljs-string">&quot;input&quot;</span> /&gt;
+</code></pre>
+<p>ref&#x5B57;&#x9762;&#x610F;&#x601D;&#x662F;&quot;&#x6307;&#x9488;&quot;&#xFF0C;&#x540E;&#x9762;&#x5927;&#x62EC;&#x53F7;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;</p>
+<pre><code>value =&gt; this.comment = value
+</code></pre><p>&#x662F;&#x4E00;&#x4E2A;&#x80D6;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4E2D;value&#x6307;&#x4EE3;&#x5F53;&#x524D;input&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x7684;Object&#xFF0C;&#x7136;&#x540E;</p>
+<pre><code>this.comment = value
+</code></pre><p>&#x5C31;&#x662F;&#x628A;input&#x5BF9;&#x8C61;&#xFF0C;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x5728;&#x6574;&#x4E2A;class&#x4E4B;&#x5185;&#xFF0C;&#x53EF;&#x4EE5;&#x968F;&#x5904;&#x8BBF;&#x95EE;</p>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5728; handleSubmit&#x51FD;&#x6570;&#x4E2D;&#x62FF;&#x5230;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x6587;&#x672C;&#x5C31;</p>
+<pre><code class="lang-js">handleSubmit = (e) =&gt; {<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.comment.value)}
+</code></pre>
+<p>&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x5982;&#x4F55;&#x80FD;&#x4ECE;form&#x7684;&#x8F93;&#x5165;&#x6846;&#x4E2D;&#x62FF;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD9;&#x4E2A;&#x6280;&#x5DE7;&#x6211;&#x4EEC;&#x5C31;&#x638C;&#x63E1;&#x4E86;&#xFF0C;&#x540C;&#x65F6;&#x8FD9;&#x4E2A;&#x4E5F;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D7;&#x63A7;&#x7EC4;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x53D6;&#x503C;&#xFF0C;&#x90A3;&#x4E2A;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#xFF0C;&#x5C31;&#x5148;&#x4E0D;&#x5B66;&#x4E60;&#x4E86;&#x3002;</p>
+<h3 id="&#x4FEE;&#x6539;state">&#x4FEE;&#x6539;state</h3>
+<blockquote>
+<p>&#x5148;&#x6765;&#x8BA8;&#x8BBA;render&#x51FD;&#x6570;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E00;&#x65E6;state&#x53D8;&#xFF0C;render()&#x81EA;&#x52A8;&#x91CD;&#x65B0;&#x6267;&#x884C;</p>
+</blockquote>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x754C;&#x9762;&#x4E0A;&#x4E24;&#x5929;&#x8BC4;&#x8BBA;&#x53D8;&#x4E09;&#x5929;&#x8BC4;&#x8BBA;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x78B0;html&#x53EA;&#x8981;&#x63A7;&#x5236;setState&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</p>
+<h3 id="&#x6E05;&#x7A7A;input">&#x6E05;&#x7A7A;input</h3>
+<p>&#x9700;&#x8981;&#x5728;&#x63D0;&#x4EA4;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x6E05;&#x7A7A;input&#x7684;value&#x503C;
+handleSubmit&#x4E2D;&#x6DFB;&#x52A0;</p>
+<pre><code>this.comment.value=&apos;&apos;
+</code></pre><p>&#x6216;&#x8005;</p>
+<pre><code>  &lt;form ref = {value =&gt; this.myForm = value} onSubmit={this.handleSubmit} className=&quot;comment-form&quot;&gt;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 第一章：redux">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2-hello-state.html" class="navigation navigation-next " aria-label="Next page: 第二节：引入redux">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第一节：状态复习","level":"1.2.1","depth":2,"next":{"title":"第二节：引入redux","level":"1.2.2","depth":2,"path":"redux/2-hello-state.md","ref":"./redux/2-hello-state.md","articles":[]},"previous":{"title":"第一章：redux","level":"1.2","depth":1,"path":"redux/index.md","ref":"./redux/index.md","articles":[{"title":"第一节：状态复习","level":"1.2.1","depth":2,"path":"redux/1-state.md","ref":"./redux/1-state.md","articles":[]},{"title":"第二节：引入redux","level":"1.2.2","depth":2,"path":"redux/2-hello-state.md","ref":"./redux/2-hello-state.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/1-state.md","mtime":"2017-07-18T11:41:47.515Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T11:38:22.064Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
