@@ -51,3 +51,9 @@ export default App
 ```
 ###redux-hello 项目中
 实现评论效果
+
+go without redux
+
+show comment num
+###参考资料
+You May Not Need Redux
