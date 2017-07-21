@@ -57,3 +57,4 @@ go without redux
 show comment num
 ###参考资料
 You May Not Need Redux
+2222
